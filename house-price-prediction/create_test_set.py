@@ -48,22 +48,13 @@ def main():
     # plt.ylabel("Number of districts")
     # plt.show()
 
-    # strat_train_set, strat_test_set = train_test_split(
-    #     housing_full, test_size=0.2, stratify=housing_full["income_cat"], random_state=42
-    # )
-    # print(strat_test_set["income_cat"].value_counts()/len(strat_test_set))
+    strat_train_set, strat_test_set = train_test_split(
+        housing_full, test_size=0.2, stratify=housing_full["income_cat"], random_state=42
+    )
+    print(strat_test_set["income_cat"].value_counts()/len(strat_test_set))
 
-    # for set__ in (strat_train_set, strat_test_set):
-    #     set__.drop("income_cat", axis=1, inplace=True)
-
-    np.random.seed(52)
-    print(np.random.rand(5))
-
-    np.random.seed(52)
-    print(np.random.rand(5))
-
-    np.random.seed(52)
-    print(np.random.rand(5))
+    for set__ in (strat_train_set, strat_test_set):
+        set__.drop("income_cat", axis=1, inplace=True)
 
 if __name__ == "__main__":
     main()
