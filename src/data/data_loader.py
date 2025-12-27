@@ -16,10 +16,10 @@ def load_housing_data():
 
 def main():
     housing_full = load_housing_data()
-    # print(housing_full.head())
-    # print(housing_full.info())
-    # print(housing_full["ocean_proximity"].value_counts())
-    # print(housing_full.describe())
+    print(housing_full.head())
+    print(housing_full.info())
+    print(housing_full["ocean_proximity"].value_counts())
+    print(housing_full.describe())
 
     plt.rc('font', size=14)
     plt.rc('axes', labelsize=14, titlesize=14)
